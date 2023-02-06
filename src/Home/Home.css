@@ -1,0 +1,209 @@
+.home {
+    position: relative;
+    min-height: calc(100vh - 51.6px);
+}
+
+.dail-codes {
+    width: 95%;
+    max-width: 1440px;
+    height: 510px;
+    margin-inline: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 18px;
+    border: 2px solid var(--black-200);
+    background: var(--black-100);
+    color: var(--white);
+}
+
+.dail-codes::backdrop {
+    background: var(--black);
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    opacity: 0.9;
+}
+
+.dail-codes-wrapper {
+    padding: 25px 25px;
+}
+
+.dail-codes-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dail-codes-wrapper h3 {
+    font-size: 1.5rem;
+}
+
+.dail-codes-close-wrapper {
+    position: relative;
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.dail-codes-close-wrapper::before,
+.dail-codes-close-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    border-radius: 100px;
+    background-color: var(--white);
+    transform-origin: center;
+}
+
+.dail-codes-close-wrapper::before {
+    transform: rotate(45deg);
+}
+
+.dail-codes-close-wrapper::after {
+    transform: rotate(-45deg);
+}
+
+.dail-codes-close-wrapper:is(:hover, :focus) {
+    cursor: pointer;
+}
+
+.dail-code-search-wrapper {
+    background-color: var(--black-200);
+    margin: 1.5em 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.dail-code-search-wrapper label {
+    padding: 0 1em;
+}
+
+.dail-code-search-wrapper input {
+    background-color: var(--black-200);
+    outline: none;
+    border: none;
+    padding: 1.5em 1em 1.5em 0;
+    color: var(--white);
+    width: 100%;
+    font-family: var(--nunito);
+}
+
+.dail-code-options {
+    border-top: 2px solid var(--black-200);
+    border-bottom: 2px solid var(--black-200);
+    padding: 24px 0;
+    overflow-y: scroll;
+    height: 315px;
+}
+
+.dail-code-options > p {
+    padding: 0 0 24px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+}
+
+.dail-code-options > p:last-of-type {
+    padding: 0 0 0;
+}
+
+.dail-code-options > p:is(:hover, :focus) {
+    cursor: pointer;
+}
+
+.dail-code {
+    font-size: 1rem;
+    padding: 1.8em 1.25em;
+    margin: 1.25em 0;
+    border: 2px solid var(--black-200);
+    background-color: var(--black-100);
+    border-radius: 18px;
+    transition: 300ms ease;
+}
+
+.dail-code-code {
+    font-family: var(--aldrich);
+    letter-spacing: 0.7px;
+    padding: 0 10px 0 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1.25em 0;
+}
+
+.number {
+    font-size: 1rem;
+    font-family: var(--aldrich);
+    padding: 1.8em 1.25em;
+    border: 2px solid var(--black-200);
+    background-color: var(--black-100);
+    border-radius: 18px;
+    color: var(--white);
+    width: 100%;
+    letter-spacing: 0.7px;
+    transition: 300ms ease;
+    outline: none;
+}
+
+.number::placeholder {
+    color: var(--white);
+    opacity: 1;
+    transition: 300ms ease;
+    font-family: var(--nunito);
+}
+
+.number:is(:hover, :focus) {
+    border: 2px solid var(--violet);
+    outline: none;
+}
+
+.number:is(:hover, :focus)::placeholder {
+    opacity: 0;
+}
+
+.start-chat-btn {
+    font-size: 1rem;
+    padding: calc(1.75em - 3.6px) 1.25em;
+    border: 2px solid var(--violet);
+    background-color: var(--violet);
+    border-radius: 18px;
+    width: 100%;
+    color: var(--black);
+    font-weight: bold;
+    transition: 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-chat-btn:is(:hover, :focus) {
+    background-color: var(--black-100);
+    color: var(--violet);
+}
+
+.start-chat-btn svg {
+    margin: 0 6px 0 0;
+    transform: translateY(-1.5px);
+    transition: 300ms ease;
+}
+
+.start-chat-btn svg path {
+    fill: var(--black);
+    transition: 300ms ease;
+}
+
+.start-chat-btn:is(:hover, :focus) svg path {
+    fill: var(--violet);
+}
+
+.visibility {
+    visibility: hidden;
+}
