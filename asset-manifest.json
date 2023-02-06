@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c92ceb4.css",
-    "main.js": "/static/js/main.49057f1d.js",
-    "static/media/WhatsappIcon.svg": "/static/media/WhatsappIcon.51f95ea0c38b5fc3e5b4df72e29795f9.svg",
-    "index.html": "/index.html",
-    "static/media/SearchIcon.svg": "/static/media/SearchIcon.49b706743f0c9a72ef31c05e55fa433d.svg",
-    "main.3c92ceb4.css.map": "/static/css/main.3c92ceb4.css.map",
-    "main.49057f1d.js.map": "/static/js/main.49057f1d.js.map"
+    "main.css": "/WhatsappChat/static/css/main.3c92ceb4.css",
+    "main.js": "/WhatsappChat/static/js/main.95e9bd7d.js",
+    "static/media/WhatsappIcon.svg": "/WhatsappChat/static/media/WhatsappIcon.51f95ea0c38b5fc3e5b4df72e29795f9.svg",
+    "index.html": "/WhatsappChat/index.html",
+    "static/media/SearchIcon.svg": "/WhatsappChat/static/media/SearchIcon.49b706743f0c9a72ef31c05e55fa433d.svg",
+    "main.3c92ceb4.css.map": "/WhatsappChat/static/css/main.3c92ceb4.css.map",
+    "main.95e9bd7d.js.map": "/WhatsappChat/static/js/main.95e9bd7d.js.map"
   },
   "entrypoints": [
     "static/css/main.3c92ceb4.css",
-    "static/js/main.49057f1d.js"
+    "static/js/main.95e9bd7d.js"
   ]
 }
