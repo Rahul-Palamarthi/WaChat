@@ -1,6 +1,6 @@
 {
-    "short_name": "WhatsappChat",
-    "name": "A React App used to open WhatsappChat",
+    "short_name": "WaChat",
+    "name": "A React App used to open WaChat",
     "icons": [
         {
             "src": "favicon.ico",
@@ -20,6 +20,6 @@
     ],
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "theme_color": "#ffffff",
+    "background_color": "#000000"
 }
