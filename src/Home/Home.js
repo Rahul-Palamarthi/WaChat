@@ -1,8 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Home.css";
 import { ReactComponent as SearchIcon } from "../assets/Images/SearchIcon.svg";
 import { ReactComponent as WhatsappIcon } from "../assets/Images/WhatsappIcon.svg";
 import allDailCodes from "../Data/DailCode.json";
+import { setLocalStroage } from "../Hooks/LocalStorage";
 
 function Home() {
     const [dailCode, setDailCode] = useState({
@@ -14,7 +15,21 @@ function Home() {
     const link = useRef();
     const dailCodesModal = useRef();
     const dailCodeSearch = useRef();
+    const home = useRef();
     const baseUrl = "https://wa.me/";
+
+    useEffect(() => {
+        const { innerHeight, outerHeight } = window;
+        const offset = outerHeight - innerHeight;
+        const header = document.querySelector("header");
+        const history = document.querySelector(".history");
+        const top =
+            innerHeight -
+            (header.offsetHeight + home.current.offsetHeight) -
+            offset -
+            70;
+        history.style.top = `${top}px`;
+    }, []);
 
     function handleOpenDailCode() {
         dailCodesModal.current.showModal();
@@ -44,13 +59,14 @@ function Home() {
     }
 
     function handleStartChat() {
+        setLocalStroage("contacts", `${dailCode.code}${num.current.value}`);
         link.current.href = `${baseUrl}${dailCode.code}${num.current.value}/?text=Hello%20World..`;
         link.current.click();
     }
 
     return (
         <>
-            <section className="home">
+            <section className="home" ref={home}>
                 <dialog ref={dailCodesModal} className="dail-codes">
                     <div className="dail-codes-wrapper">
                         <div className="dail-codes-info">

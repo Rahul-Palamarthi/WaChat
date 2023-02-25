@@ -4,6 +4,7 @@
 :root {
     --black: hsl(0, 0%, 0%);
     --black-100: hsl(0, 0%, 5%);
+    --black-150: hsl(0, 0%, 9%);
     --black-200: hsl(0, 0%, 13%);
     --white: hsl(231, 27%, 86%);
     --violet: #c6b9ff;
@@ -29,7 +30,7 @@ html {
 }
 
 body {
-    width: min(95%, 1440px);
+    width: min(98%, 1440px);
     margin-inline: auto;
     overflow-x: hidden;
     min-height: 100vh;
