@@ -1,5 +1,40 @@
 header {
-    padding: 1em 0 0;
+    padding: 0.55em 0 0;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1000px;
+    background-image: linear-gradient(to right, var(--green), var(--white));
+}
+
+.about {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 600px;
+    height: 100vh;
+    background-color: var(--red-100);
+    z-index: 1000;
+    transform: translateX(calc(100vw + 10px));
+    transition: 300ms ease;
+}
+
+.open-about {
+    transform: translateX(0);
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header a {
@@ -13,16 +48,31 @@ header a {
     font-size: 1.2rem;
 }
 
-.header-intro {
-    text-transform: uppercase;
-    font-family: var(--inter);
-    letter-spacing: 0.7px;
-    font-size: 2.5rem;
-    padding: 16px 0 0.25em;
-    -webkit-text-stroke: 1.5px var(--white);
+.handburger-menu {
+    position: relative;
+    top: -5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 4px 0 0;
 }
 
-.violet {
-    color: var(--violet);
-    -webkit-text-stroke: 1.5px var(--violet);
+.handburger-menu:is(:hover, :focus) {
+    cursor: pointer;
+}
+
+.handburger-menu .bar1 {
+    width: 26px;
+    border-radius: 0 0 0 2px;
+    height: 3px;
+    background-color: var(--white);
+}
+
+.handburger-menu .bar2 {
+    width: 15px;
+    border-radius: 0 0 0 2px;
+    height: 3px;
+    background-color: var(--white);
 }

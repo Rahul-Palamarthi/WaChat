@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "./Home.css";
 import { ReactComponent as SearchIcon } from "../assets/Images/SearchIcon.svg";
 import { ReactComponent as WhatsappIcon } from "../assets/Images/WhatsappIcon.svg";
+import { ReactComponent as HistoryIcon } from "../assets/Images/HistoryIcon.svg";
 import allDailCodes from "../Data/DailCode.json";
 import { setLocalStroage } from "../Hooks/LocalStorage";
 
@@ -15,20 +16,13 @@ function Home() {
     const link = useRef();
     const dailCodesModal = useRef();
     const dailCodeSearch = useRef();
-    const home = useRef();
+    const historyLink = useRef();
     const baseUrl = "https://wa.me/";
 
     useEffect(() => {
-        const { innerHeight, outerHeight } = window;
-        const offset = outerHeight - innerHeight;
-        const header = document.querySelector("header");
-        const history = document.querySelector(".history");
-        const top =
-            innerHeight -
-            (header.offsetHeight + home.current.offsetHeight) -
-            offset -
-            70;
-        history.style.top = `${top}px`;
+        const innerHeight = window.innerHeight;
+        const body = document.body;
+        body.style.height = `${innerHeight}px`;
     }, []);
 
     function handleOpenDailCode() {
@@ -59,14 +53,24 @@ function Home() {
     }
 
     function handleStartChat() {
-        setLocalStroage("contacts", `${dailCode.code}${num.current.value}`);
+        const val = num.current.value;
+        if (val === "") {
+            alert("Enter Number");
+            return;
+        }
+        setLocalStroage("contacts", `${dailCode.code}${val}`);
         link.current.href = `${baseUrl}${dailCode.code}${num.current.value}/?text=Hello%20World..`;
         link.current.click();
     }
 
+    const handleHistory = () => {
+        const history = document.querySelector(".history");
+        history.classList.toggle("open");
+    };
+
     return (
         <>
-            <section className="home" ref={home}>
+            <section className="home">
                 <dialog ref={dailCodesModal} className="dail-codes">
                     <div className="dail-codes-wrapper">
                         <div className="dail-codes-info">
@@ -121,21 +125,34 @@ function Home() {
                                 className="number"
                                 type="tel"
                                 required
-                                placeholder="Enter Number"
+                                placeholder="Number"
                                 autoComplete="off"
                             />
                         </p>
                     </div>
-                    <button
-                        className="start-chat-btn"
-                        type="button"
-                        onClick={handleStartChat}
-                    >
-                        <WhatsappIcon />
-                        <span>Start Chat</span>
-                    </button>
+                    <div className="flex">
+                        <button
+                            className="chat-btn"
+                            type="button"
+                            onClick={handleStartChat}
+                        >
+                            <WhatsappIcon />
+                            <span>Chat</span>
+                        </button>
+                        <button
+                            className="history-btn"
+                            type="button"
+                            onClick={handleHistory}
+                        >
+                            <HistoryIcon />
+                            <span>History</span>
+                        </button>
+                    </div>
                 </div>
                 <a ref={link} className="visibility" href={`https://wa.me/`}>
+                    link
+                </a>
+                <a ref={historyLink} className="visibility" href={`#history`}>
                     link
                 </a>
             </section>

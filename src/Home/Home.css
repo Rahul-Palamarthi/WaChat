@@ -3,7 +3,7 @@
 }
 
 .dail-codes {
-    width: 95%;
+    width: 98%;
     max-width: 1440px;
     height: 510px;
     margin-inline: auto;
@@ -11,7 +11,7 @@
     top: 50%;
     transform: translateY(-50%);
     border-radius: 18px;
-    border: 2px solid var(--black-200);
+    border: 2px solid var(--black-150);
     background: var(--black-100);
     color: var(--white);
 }
@@ -116,35 +116,40 @@
 }
 
 .dail-code {
-    font-size: 1rem;
-    padding: 1.8em 1.25em;
-    margin: 1.25em 0;
-    border: 2px solid var(--black-200);
-    background-color: var(--black-100);
-    border-radius: 18px;
+    font-size: 0.9rem;
+    padding: 2.25em 2.3em;
+    margin: 8px 0;
+    border: 2px solid var(--black-150);
+    background-color: var(--black-150);
+    border-radius: 1000px;
     transition: 300ms ease;
 }
 
 .dail-code-code {
     font-family: var(--aldrich);
     letter-spacing: 0.7px;
-    padding: 0 10px 0 0;
+    padding: 0 6px 0 0;
 }
 
 .flex {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 1.25em 0;
+    margin: 8px 0;
+    gap: 6px;
+}
+
+.flex > * {
+    width: 100%;
 }
 
 .number {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: var(--aldrich);
-    padding: 1.8em 1.25em;
-    border: 2px solid var(--black-200);
-    background-color: var(--black-100);
-    border-radius: 18px;
+    padding: 2.25em 2.3em;
+    border: 2px solid var(--black-150);
+    background-color: var(--black-150);
+    border-radius: 1000px;
     color: var(--white);
     width: 100%;
     letter-spacing: 0.7px;
@@ -160,7 +165,7 @@
 }
 
 .number:is(:hover, :focus) {
-    border: 2px solid var(--violet);
+    border: 2px solid var(--green);
     outline: none;
 }
 
@@ -168,39 +173,79 @@
     opacity: 0;
 }
 
-.start-chat-btn {
+.chat-btn {
     font-size: 1rem;
-    padding: calc(1.75em - 3.6px) 1.25em;
-    border: 2px solid var(--violet);
-    background-color: var(--violet);
-    border-radius: 18px;
+    border: 2px solid var(--green);
+    background-color: var(--green);
+    border-radius: 30px;
     width: 100%;
     color: var(--black);
-    font-weight: bold;
+    font-weight: 700;
     transition: 300ms ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    aspect-ratio: 1;
+    max-width: 300px;
 }
 
-.start-chat-btn:is(:hover, :focus) {
-    background-color: var(--black-100);
-    color: var(--violet);
+.chat-btn:is(:hover, :focus) {
+    background-color: var(--black-150);
+    color: var(--green);
 }
 
-.start-chat-btn svg {
-    margin: 0 6px 0 0;
+.chat-btn svg {
+    margin: 0 0 6px 0;
     transform: translateY(-1.5px);
     transition: 300ms ease;
 }
 
-.start-chat-btn svg path {
-    fill: var(--black);
+.chat-btn svg path {
+    fill: var(--black-100);
     transition: 300ms ease;
 }
 
-.start-chat-btn:is(:hover, :focus) svg path {
-    fill: var(--violet);
+.chat-btn:is(:hover, :focus) svg path {
+    fill: var(--green);
+}
+
+.history-btn {
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    color: var(--black);
+    border-radius: 1000px;
+    aspect-ratio: 1;
+    max-width: 300px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 0.7px;
+}
+
+.history-btn svg {
+    margin: 0 0 6px 0;
+    transform: translateY(-1.5px);
+    transition: 300ms ease;
+    fill: var(--white);
+}
+
+.history-btn svg path {
+    fill: var(--white);
+    transition: 300ms ease;
+}
+
+.history-btn:is(:hover, :focus) svg path {
+    fill: var(--white);
+}
+
+.history-btn:is(:hover, :focus) {
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .visibility {

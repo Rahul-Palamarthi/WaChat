@@ -1,14 +1,48 @@
 .history {
-    position: relative;
+    padding: 8px 0 0;
+    position: absolute;
+    overflow: scroll;
+    width: 98%;
+    transform: translateY(300%);
+    transition: 300ms ease;
+}
+
+.open {
+    transform: translateY(0);
 }
 
 .history-wrapper {
-    padding: 0 0 2em;
+    padding: 0 0 8px;
 }
 
-.history h1 {
-    margin: 0 0 0.75em;
+.history-heading-wrapper {
+    border-radius: 1000px;
+    padding: 0.5em 1.4em 0.5em 2.1em;
+    background-color: var(--black-150);
+    border: 2px solid var(--black-150);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+}
+
+.history p {
+    margin: 0 0 0 0;
+}
+
+.clear-all {
     text-align: center;
+    background-color: var(--red);
+    letter-spacing: 0.7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 10px 10px;
+}
+
+.clear-all:is(:hover, :focus) {
+    cursor: pointer;
 }
 
 .contact-card {
@@ -22,8 +56,8 @@
     letter-spacing: 0.7px;
 }
 
-:is(.phone-svg, .copy-svg) {
-    fill: var(--violet);
+:is(.phone-svg) {
+    fill: var(--white);
     transform: scale(1.15);
 }
 
@@ -31,24 +65,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 13px;
+    gap: 18px;
 }
 
 .contact-card {
+    font-size: 0.9rem;
     background-color: var(--black-150);
-    padding: 1.25em 1.25em;
-    margin: 1.25em 0;
-    border-radius: 20px;
-    border: 2px solid var(--black-200);
+    padding: 1.25em 2.25em;
+    margin: 8px 0;
+    border-radius: 1000px;
+    border: 2px solid var(--black-150);
 }
 
-.clear-all {
-    text-align: center;
-    padding: 0.75em 0 0;
-    color: var(--violet);
-    letter-spacing: 0.7px;
-}
-
-.clear-all:is(:hover, :focus) {
-    cursor: pointer;
+.no-chats {
+    border-radius: 1000px;
+    background-color: var(--black-150);
+    border: 2px solid var(--black-150);
+    padding: 1.5em 2.25em;
+    font-size: 0.9rem;
 }

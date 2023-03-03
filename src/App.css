@@ -1,13 +1,16 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Nunito:wght@400;600&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:wght@600&family=Nunito:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:wght@600&family=Nunito:wght@300;400;600;700&display=swap");
 
 :root {
     --black: hsl(0, 0%, 0%);
     --black-100: hsl(0, 0%, 5%);
-    --black-150: hsl(0, 0%, 9%);
-    --black-200: hsl(0, 0%, 13%);
-    --white: hsl(231, 27%, 86%);
-    --violet: #c6b9ff;
+    --black-150: hsl(0, 0%, 10%);
+    --black-200: hsl(0, 0%, 12%);
+    --white: hsl(0, 0%, 100%);
+    --cream: #eee9cc;
+    --green: #02d37f;
+    --red: #d83025;
+    --red-100: #ff5353;
     --inter: "Inter", sans-serif;
     --nunito: "Nunito", sans-serif;
     --aldrich: "Aldrich", sans-serif;
@@ -28,13 +31,15 @@ html {
     background: var(--black);
     color: var(--white);
     font-family: var(--nunito);
+    overflow-x: hidden;
 }
 
 body {
     width: min(98%, 1440px);
     margin-inline: auto;
     overflow-x: hidden;
-    min-height: 100vh;
+    overflow-y: hidden;
+    position: relative;
 }
 
 button {
