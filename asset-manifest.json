@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/WaChat/static/css/main.04b8bbd7.css",
-    "main.js": "/WaChat/static/js/main.317c8981.js",
-    "static/media/WhatsappIcon.svg": "/WaChat/static/media/WhatsappIcon.51f95ea0c38b5fc3e5b4df72e29795f9.svg",
+    "main.css": "/WaChat/static/css/main.bf5df162.css",
+    "main.js": "/WaChat/static/js/main.540dceea.js",
+    "static/media/WhatsappIcon.svg": "/WaChat/static/media/WhatsappIcon.eaeaf60a7424563489e2049dedaa8e83.svg",
+    "static/media/DeleteIcon.svg": "/WaChat/static/media/DeleteIcon.bfee02dc01a3643de33b4abbfda977fc.svg",
     "index.html": "/WaChat/index.html",
     "static/media/PhoneIcon.svg": "/WaChat/static/media/PhoneIcon.933900fae82de2de2fae8f548382c75f.svg",
-    "static/media/CopyIcon.svg": "/WaChat/static/media/CopyIcon.074c9449b38dabcd340ff7fb59248afd.svg",
     "static/media/SearchIcon.svg": "/WaChat/static/media/SearchIcon.49b706743f0c9a72ef31c05e55fa433d.svg",
-    "main.04b8bbd7.css.map": "/WaChat/static/css/main.04b8bbd7.css.map",
-    "main.317c8981.js.map": "/WaChat/static/js/main.317c8981.js.map"
+    "static/media/HistoryIcon.svg": "/WaChat/static/media/HistoryIcon.31bebfec03d0b0e4a258c5648603647b.svg",
+    "main.bf5df162.css.map": "/WaChat/static/css/main.bf5df162.css.map",
+    "main.540dceea.js.map": "/WaChat/static/js/main.540dceea.js.map"
   },
   "entrypoints": [
-    "static/css/main.04b8bbd7.css",
-    "static/js/main.317c8981.js"
+    "static/css/main.bf5df162.css",
+    "static/js/main.540dceea.js"
   ]
 }
